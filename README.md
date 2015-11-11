@@ -1,2 +1,2 @@
 # team-fig
-Repository for team fig 
+Software Engineering repository for team fig 
