@@ -59,7 +59,6 @@
 	</form>
 	</div>
     </div>
-  </form>
 
 	<!-- FOOTER -->
 	<div id="footer_wrap" class="outer">
