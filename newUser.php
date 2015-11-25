@@ -54,8 +54,8 @@ if (!isset($_POST['submitok'])):
                   </div>
 
                   <div class="form-group col-md-6">
-                    <label for="username">Username</label>
-                    <input class="form-control" id="username" placeholder="Username">
+                    <label for="userID">Username</label>
+                    <input class="form-control" id="userID" placeholder="Username">
                   </div>
                 </div>
 
@@ -85,7 +85,7 @@ if (!isset($_POST['submitok'])):
   else:
   // Process signup submission
   $link = dbConnect();
-  if ($_POST['username']=='' or $_POST['name']=='' or $_POST['password']=='') {
+  if ($_POST['userID']=='' or $_POST['name']=='' or $_POST['password']=='') {
     error('One or more required fields were left blank.\n'.
     'Please fill them in and try again.');
   }
