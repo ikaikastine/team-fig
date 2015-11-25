@@ -82,59 +82,58 @@ if (!isset($_POST['submitok'])):
 </html>
 
 <?php
-else:
-// Process signup submission
-$link = dbConnect();
-if ($_POST['username']=='' or $_POST['name']=='' or $_POST['password']=='') {
-error('One or more required fields were left blank.\n'.
-'Please fill them in and try again.');
-}
+  else:
+  // Process signup submission
+  $link = dbConnect();
+  if ($_POST['username']=='' or $_POST['name']=='' or $_POST['password']=='') {
+    error('One or more required fields were left blank.\n'.
+    'Please fill them in and try again.');
+  }
 
 
-// Check for existing user with the new id
-$sql = "SELECT COUNT(*) FROM FIG_USER WHERE username = '$_POST[username]'";
-$result = mysqli_query($link,$sql);
-if (!$result) {
-error('A database error occurred in processing your '.
-'submission.\nIf this error persists, please '.
-'contact you@example.com.');
-}
+  // Check for existing user with the new id
+  $sql = "SELECT COUNT(*) FROM FIG_USER WHERE username = '$_POST[username]'";
+  $result = mysqli_query($link,$sql);
+  if (!$result) {
+    error('A database error occurred in processing your '.
+    'submission.\nIf this error persists, please '.
+    'contact you@example.com.');
+  }
 
-//need to find a way to replace this to prevent duping users
-//original code uses some ancient library that was deprecated
-//need to convert to mysqli now
-//im not a php wizard yet so... i haven't figured it out yet
+  //need to find a way to replace this to prevent duping users
+  //original code uses some ancient library that was deprecated
+  //need to convert to mysqli now
+  //im not a php wizard yet so... i haven't figured it out yet
 
-/* if (@mysql_result($result,0,0)>0) {
-error('A user already exists with your chosen userid.\n'.
-'Please try another.');
-} */
+  /* if (@mysql_result($result,0,0)>0) {
+  error('A user already exists with your chosen userid.\n'.
+  'Please try another.');
+  } */
 
-$hash = hash('sha256', $_POST[password]);
+  $hash = hash('sha256', $_POST[password]);
 
-$sql = "INSERT INTO FIG_USER SET
-name = '$_POST[name]',
-username = '$_POST[username]',
-password = '$hash'";
+  $sql = "INSERT INTO FIG_USER SET
+  name = '$_POST[name]',
+  username = '$_POST[username]',
+  password = '$hash'";
 
-if (!mysqli_query($link,$sql))
-error('A database error occurred in processing your '.
-'submission.\nIf this error persists, please '.
-'contact you@example.com.');
+  if (!mysqli_query($link,$sql))
+    error('A database error occurred in processing your '.
+    'submission.\nIf this error persists, please '.
+    'contact you@example.com.');
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title> Registration Complete </title>
-<meta http-equiv="Content-Type"
-content="text/html; charset=iso-8859-1" />
+  <title> Registration Complete </title>
+  <meta http-equiv="Content-Type"
+  content="text/html; charset=iso-8859-1" />
 </head>
 <body>
-<p><strong>User registration successful!</strong></p>
-<p>To log in,
-click <a href="index.html">here</a> to return to the main
-page.</p>
+  <p><strong>User registration successful!</strong></p>
+  <p>To log in, click <a href="index.html">here</a> to return to the main page.</p>
 </body>
 </html>
 <?php
