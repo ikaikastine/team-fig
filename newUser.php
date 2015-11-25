@@ -45,7 +45,7 @@ if (!isset($_POST['submitok'])):
 
             <p>Were excited that you've decided to join us. Please fill out the information below to complete the setup of your profile</p>
 
-            <form role="form" method="post" action="profileUpdate.php">
+            <form role="form" method="post" action="<?=$_SERVER['PHP_SELF']?>">
               <div class="inner">
                 <div class="row">
                   <div class="form-group col-md-6">
@@ -64,7 +64,7 @@ if (!isset($_POST['submitok'])):
                   <input class="form-control" type="password" id="password" placeholder="Password">
                 </div>
 
-                <button type="submit" class="btn btn-default">Submit</button>
+                <input type="submit" name="submitok" class="btn btn-default">Submit</button>
               </div>
             </form>
             </div>
