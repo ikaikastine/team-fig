@@ -1,7 +1,7 @@
 <?php // accesscontrol.php
 	@ob_start();
 	session_start();
-	ini_set('display_errors', 'On'); 
+	#ini_set('display_errors', 'On'); 
 
 	include_once 'common.php';
 	include_once 'db.php';
