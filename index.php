@@ -46,7 +46,7 @@
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>New Users</h3>
 
-<p>If you are a first time user, please click <a href="http://ikaikastine.github.io/team-fig/newUser.php">here</a> to create a profile</p>
+<p>If you are a first time user, please click <a href="newUser.php">here</a> to create a profile</p>
 
 <!-- RETURNING USERS -->
 <h3>
