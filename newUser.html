@@ -37,14 +37,51 @@
 
             <p>Were excited that you've decided to join us. Please fill out the information below to complete the setup of your profile</p>
 
-            <form action="activities.php" method="post">
-                Enter your first name:  <input name="firstName" size="10"><br>
-                Enter your last name: <input name="lastName" size="10"><br>
-                Enter your email address:  <input name="email" size="10"><br>
-                Enter your age:  <input name="age" size="10"><br>
-                Enter your weight:  <input name="weight" size="10"><br>
+            <form>
+              <div class="inner">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="firstName">First Name</label>
+                    <input class="form-control" id="firstName" placeholder="First Name">
+                  </div>
 
-                <br><input type="submit">
+                  <div class="form-group col-md-6">
+                    <label for="lastName">Last Name</label>
+                    <input class="form-control" id="lastName" placeholder="Last Name">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="age">Age</label>
+                    <input class="form-control" type="number" id="age" placeholder="Age">
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label for="weight">Weight</label>
+                    <input class="form-control" id="weight" placeholder="Weight">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input class="form-control" type="email" id="email" placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                  <label for="Password">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
             </form>
+    <!-- FOOTER -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Fitness Incentivizer Goal System is maintained by Team-Fig</p>
+        <p>For more information click <a href="https://github.com/ikaikastine/team-fig">here</a></p>
+      </footer>
+    </div>
   </body>
 </html>
