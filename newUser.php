@@ -133,7 +133,7 @@ if (!isset($_POST['submitok'])):
 </head>
 <body>
   <p><strong>User registration successful!</strong></p>
-  <p>To log in, click <a href="index.html">here</a> to return to the main page.</p>
+  <p>To log in, click <a href="index.php">here</a> to return to the main page.</p>
 </body>
 </html>
 <?php
