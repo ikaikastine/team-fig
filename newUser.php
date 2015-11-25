@@ -50,21 +50,21 @@ if (!isset($_POST['submitok'])):
                 <div class="row">
                   <div class="form-group col-md-6">
                     <label for="name">Name</label>
-                    <input class="form-control" id="name" placeholder="Name">
+                    <input class="form-control" name="name" placeholder="Name">
                   </div>
 
                   <div class="form-group col-md-6">
-                    <label for="username">Username</label>
-                    <input class="form-control" id="username" placeholder="Username">
+                    <label for="userID">Username</label>
+                    <input class="form-control" name="userID" placeholder="Username">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="password">Password</label>
-                  <input class="form-control" type="password" id="password" placeholder="Password">
+                  <input class="form-control" type="password" name="password" placeholder="Password">
                 </div>
 
-                <input type="submit" name="submitok" class="btn btn-default">Submit</button>
+                <button type="submit" name="submitok" class="btn btn-default">Submit</button>
               </div>
             </form>
             </div>
@@ -85,14 +85,14 @@ if (!isset($_POST['submitok'])):
   else:
   // Process signup submission
   $link = dbConnect();
-  if ($_POST['username']=='' or $_POST['name']=='' or $_POST['password']=='') {
+  if ($_POST['userID']=='' or $_POST['name']=='' or $_POST['password']=='') {
     error('One or more required fields were left blank.\n'.
     'Please fill them in and try again.');
   }
 
 
   // Check for existing user with the new id
-  $sql = "SELECT COUNT(*) FROM FIG_USER WHERE username = '$_POST[username]'";
+  $sql = "SELECT COUNT(*) FROM FIG_USER WHERE username = '$_POST[userID]'";
   $result = mysqli_query($link,$sql);
   if (!$result) {
     error('A database error occurred in processing your '.
@@ -114,7 +114,7 @@ if (!isset($_POST['submitok'])):
 
   $sql = "INSERT INTO FIG_USER SET
   name = '$_POST[name]',
-  username = '$_POST[username]',
+  username = '$_POST[userID]',
   password = '$hash'";
 
   if (!mysqli_query($link,$sql))
@@ -133,7 +133,7 @@ if (!isset($_POST['submitok'])):
 </head>
 <body>
   <p><strong>User registration successful!</strong></p>
-  <p>To log in, click <a href="index.html">here</a> to return to the main page.</p>
+  <p>To log in, click <a href="index.php">here</a> to return to the main page.</p>
 </body>
 </html>
 <?php

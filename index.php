@@ -17,7 +17,7 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/ikaikastine/team-fig">Log In</a>
+          <a id="forkme_banner" href="test_page.php">Log In</a>
 
           <h1 id="project_title">Fitness Incentivizer Goal System</h1>
           <!-- <h2 id="project_tagline">Repository for team fig </h2> -->
@@ -46,7 +46,7 @@
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>New Users</h3>
 
-<p>If you are a first time user, please click <a href="http://ikaikastine.github.io/team-fig/newUser.php">here</a> to create a profile</p>
+<p>If you are a first time user, please click <a href="newUser.php">here</a> to create a profile</p>
 
 <!-- RETURNING USERS -->
 <h3>
