@@ -48,6 +48,13 @@
 
 	if(!isset($uid)) {
 ?>
+		
+		<!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Log In</h3>
+
 		<div class="inner">		
 			<h1> Login Required </h1>
 			<p>You must log in to access this area of the site. If you are
@@ -64,6 +71,9 @@
 				</div>
 				<button class="btn btn-default" type="submit">Login</button>
 			</form>
+		</div>
+		</section>
+		</div>	
 <?php
 		exit;
 	}
