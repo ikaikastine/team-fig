@@ -92,7 +92,7 @@ if (!isset($_POST['submitok'])):
 
 
   // Check for existing user with the new id
-  $sql = "SELECT COUNT(*) FROM FIG_USER WHERE username = '$_POST[username]'";
+  $sql = "SELECT COUNT(*) FROM FIG_USER WHERE username = '$_POST[userID]'";
   $result = mysqli_query($link,$sql);
   if (!$result) {
     error('A database error occurred in processing your '.
@@ -114,7 +114,7 @@ if (!isset($_POST['submitok'])):
 
   $sql = "INSERT INTO FIG_USER SET
   name = '$_POST[name]',
-  username = '$_POST[username]',
+  username = '$_POST[userID]',
   password = '$hash'";
 
   if (!mysqli_query($link,$sql))
