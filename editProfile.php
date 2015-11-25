@@ -39,31 +39,14 @@
 		<div class="inner">
 			<div class="row">
 				<div class="form-group col-md-6">
-					<label for="firstName">First Name</label>
-					<input class="form-control" id="firstName" placeholder="First Name">
+					<label for="name">Name</label>
+					<input class="form-control" id="name" placeholder="First Name">
 				</div>
 
 				<div class="form-group col-md-6">
-					<label for="lastName">Last Name</label>
-					<input class="form-control" id="lastName" placeholder="Last Name">
+					<label for="userName">User Name</label>
+					<input class="form-control" id="username" placeholder="User Name">
 				</div>
-			</div>
-
-			<div class="row">
-				<div class="form-group col-md-6">
-					<label for="age">Age</label>
-					<input class="form-control" type="number" id="age" placeholder="Age">
-				</div>
-
-				<div class="form-group col-md-6">
-					<label for="weight">Weight</label>
-					<input class="form-control" id="weight" placeholder="Weight">
-				</div>
-			</div>
-
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input class="form-control" type="email" id="email" placeholder="Email">
 			</div>
 
 			<div class="form-group">

@@ -36,17 +36,14 @@
 
 	<?php
 		//get the managerID and the password via POST
-		$firstName = $_POST['firstName'];
-		$lastName = $_POST['lastName'];
-		$age = $_POST['age'];
-		$weight = $_POST['weight'];
-		$email = $_POST['email'];
+		$name = $_POST['name'];
+		$userName = $_POST['username'];
 		$password = $_POST['password'];
 
 
 		//connect to the database to find the managerID and check if the password matches
 		$dbc = dbConnect();
-		$query = "UPDATE FIG_USER SET firstname = '$firstname', lastname = '$lastname', age = '$age', email = '$email', weight = '$weight', password = '$password';  WHERE user_id = '$userID'";
+		$query = "UPDATE FIG_USER SET name = '$name'; username = '$username'; password = '$password';  WHERE user_id = '$userID'";
 		$result = mysqli_query($dbc, $query) or die(mysqli_error($dbc));
 		//terminate the connection with the database
 		mysqli_close($dbc);
