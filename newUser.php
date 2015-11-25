@@ -50,18 +50,18 @@ if (!isset($_POST['submitok'])):
                 <div class="row">
                   <div class="form-group col-md-6">
                     <label for="name">Name</label>
-                    <input class="form-control" id="name" placeholder="Name">
+                    <input class="form-control" name="name" placeholder="Name">
                   </div>
 
                   <div class="form-group col-md-6">
                     <label for="userID">Username</label>
-                    <input class="form-control" id="userID" placeholder="Username">
+                    <input class="form-control" name="userID" placeholder="Username">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="password">Password</label>
-                  <input class="form-control" type="password" id="password" placeholder="Password">
+                  <input class="form-control" type="password" name="password" placeholder="Password">
                 </div>
 
                 <button type="submit" name="submitok" class="btn btn-default">Submit</button>
