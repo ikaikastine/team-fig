@@ -64,7 +64,7 @@ if (!isset($_POST['submitok'])):
                   <input class="form-control" type="password" id="password" placeholder="Password">
                 </div>
 
-                <input type="submit" name="submitok" class="btn btn-default">Submit</button>
+                <button> type="submit" name="submitok" class="btn btn-default">Submit</button>
               </div>
             </form>
             </div>
