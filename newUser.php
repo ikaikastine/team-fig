@@ -1,10 +1,11 @@
 <?php ini_set('display_errors', 'On'); ?>
 
-<?php // cred.php
-$dbhost = 'oniddb.cws.oregonstate.edu';
-$dbname = 'anderma4-db';
-$dbuser = 'anderma4-db';
-$dbpass = 'QCRyUSSxRbmWcZir';
+<?php // RegisterUser.php
+include 'common.php';
+include 'db.php';
+include_once 'cred.php';
+if (!isset($_POST['submitok'])):
+// Display the user signup form
 ?>
 
 <!DOCTYPE html>
@@ -48,36 +49,19 @@ $dbpass = 'QCRyUSSxRbmWcZir';
               <div class="inner">
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <label for="firstName">First Name</label>
-                    <input class="form-control" id="firstName" placeholder="First Name">
+                    <label for="name">Name</label>
+                    <input class="form-control" id="name" placeholder="Name">
                   </div>
 
                   <div class="form-group col-md-6">
-                    <label for="lastName">Last Name</label>
-                    <input class="form-control" id="lastName" placeholder="Last Name">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="age">Age</label>
-                    <input class="form-control" type="number" id="age" placeholder="Age">
-                  </div>
-
-                  <div class="form-group col-md-6">
-                    <label for="weight">Weight</label>
-                    <input class="form-control" id="weight" placeholder="Weight">
+                    <label for="username">Username</label>
+                    <input class="form-control" id="username" placeholder="Username">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="email">Email</label>
-                  <input class="form-control" type="email" id="email" placeholder="Email">
-                </div>
-
-                <div class="form-group">
-                  <label for="Password">Password</label>
-                  <input type="password" class="form-control" id="password" placeholder="Password">
+                  <label for="password">Password</label>
+                  <input class="form-control" type="password" id="password" placeholder="Password">
                 </div>
 
                 <button type="submit" class="btn btn-default">Submit</button>
