@@ -52,8 +52,6 @@
 		<!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Log In</h3>
 
 		<div class="inner">		
 			<h1> Login Required </h1>
@@ -67,7 +65,7 @@
 				</div>
 				<div class="form-group">
 					<label for="password">Password</label> 
-					<input class="form-control" type="password" name="pwd" SIZE="8">
+					<input class="form-control" type="password" name="pwd" SIZE="8" placeholder="Password">
 				</div>
 				<button class="btn btn-default" type="submit">Login</button>
 			</form>
