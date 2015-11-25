@@ -6,8 +6,35 @@
 	include_once 'common.php';
 	include_once 'db.php';
 	include_once 'cred.php';
+?>
+<!DOCTYPE html>
+<html lang="US-EN">
+<head>
+	<title>Fitness Incentivizer Goal System</title>
 
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+	
+	<link rel="stylesheet" type"text/css" media="screen" href="stylesheets/stylesheet.css">
+</head>
+<body>
+	<div id="header_wrap" class="outer">
+		<header class="inner">
+			<h1 id="project_title">Fitness Incentivizer Goal System</h1>
+			<!-- <h2 id="project_tagline">Repository for team fig </h2> -->
+			<!--
+			<section id="downloads">
+			<a class="zip_download_link" href="https://github.com/ikaikastine/team-fig/zipball/master">Download this project as a .zip file</a>
+			<a class="tar_download_link" href="https://github.com/ikaikastine/team-fig/tarball/master">Download this project as a tar.gz file</a>
+			</section>
+			-->
+		</header>
+	</div>
+
+<?php
 	if (isset($_POST['uid'])) {
 		$uid = $_POST['uid'];
 	} else {
@@ -21,29 +48,25 @@
 
 	if(!isset($uid)) {
 ?>
-	<!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-	<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title> Please Log In for Access </title>
-		<meta http-equiv="Content-Type"
-	content="text/html; charset=iso-8859-1" />
-	</head>
-	<body>
-		<h1> Login Required </h1>
-		<p>You must log in to access this area of the site. If you are
-		not a registered user, <a href="RegisterUser.php">click here</a>
-		to sign up for instant access!</p>
-		<p><form method="post" action="<?=$_SERVER['PHP_SELF']?>">
-		Username: <input type="text" name="uid" size="8" /><br />
-		Password: <input type="password" name="pwd" SIZE="8" /><br />
-		<input type="submit" value="Log in" />
-	</form></p>
-	</body>
-	</html>
+		<div class="inner">		
+			<h1> Login Required </h1>
+			<p>You must log in to access this area of the site. If you are
+			not a registered user, <a href="RegisterUser.php">click here</a>
+			to sign up for instant access!</p>
+			<form method="post" action="<?=$_SERVER['PHP_SELF']?>">
+				<div class="form-group">
+					<label for="username">Username</label>
+					<input class="form-control" type="text" name="uid" size="8" placeholder="User Name">
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label> 
+					<input class="form-control" type="password" name="pwd" SIZE="8">
+				</div>
+				<button class="btn btn-default" type="submit">Login</button>
+			</form>
 <?php
-	exit;
-}
+		exit;
+	}
 
 	$_SESSION['uid'] = $uid;
 	$_SESSION['pwd'] = $pwd;
@@ -65,23 +88,14 @@
 	unset($_SESSION['uid']);
 	unset($_SESSION['pwd']);
 ?>
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-	<html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<title> Access Denied </title>
-			<meta http-equiv="Content-Type"
-			content="text/html; charset=iso-8859-1" />
-		</head>
-		<body>
-			<h1> Access Denied </h1>
-			<p>Your user ID or password is incorrect, or you are not a
-			registered user on this site. To try logging in again, click
-			<a href="<?=$_SERVER['PHP_SELF']?>">here</a>. To register for instant
-			access, click <a href="RegisterUser.php">here</a>.</p>
-		</body>
-	</html>
+		<h1> Access Denied </h1>
+		<p>Your user ID or password is incorrect, or you are not a
+		registered user on this site. To try logging in again, click
+		<a href="<?=$_SERVER['PHP_SELF']?>">here</a>. To register for instant
+		access, click <a href="RegisterUser.php">here</a>.</p>
 <?php
 	exit;
 	}
 ?>
+</body>
+</html>
