@@ -30,8 +30,8 @@ if (!isset($_POST['submitok'])):
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome New User!</h3>
-            <p>Were excited that you've decided to join us. Please fill out the information below to complete the setup of your profile</p>
+        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>View Profile</h3>
+            <p>Here is your information:</p>
             <form role="form" method="post" action="<?=$_SERVER['PHP_SELF']?>">
               <div class="inner">
                 <div class="row">
