@@ -54,7 +54,7 @@ CREATE TABLE FIG_WORKOUT
 		ON UPDATE CASCADE
 );
 
-INSERT INTO FIG_EXERCISE (name, kcalhr, description) VALUES
+INSERT INTO FIG_EXERCISE (name, kcalhr) VALUES
 ('Golf', 368),
 ('Fencing', 490),
 ('Cleaning gutters', 409),
