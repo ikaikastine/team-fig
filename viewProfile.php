@@ -38,6 +38,17 @@
             ?>
             <p>Welcome back <?php echo $result['name']; ?> </p>
 
+            <p> 
+                <?php 
+                    echo $result['name'];
+                    echo $result['password'];
+                    echo $result['points'];
+                    echo $result['weight'];
+                    echo $result['height'];
+                    echo $result['age'];
+                    echo $result['location'];
+                ?>
+            </p>
 
     </div>
     <!-- FOOTER -->
