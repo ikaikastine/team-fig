@@ -43,11 +43,16 @@
             <p> 
                 <?php 
                     echo $profile_result['name'];
+                    echo "<br>";
                     #echo $profile_result['password'];
                     echo $profile_result['points'];
+                    echo "<br>";
                     echo $profile_result['weight'];
+                    echo "<br>";
                     echo $profile_result['height'];
+                    echo "<br>";
                     echo $profile_result['age'];
+                    echo "<br>";
                     echo $profile_result['location'];
                 ?>
             </p>
