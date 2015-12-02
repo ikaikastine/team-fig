@@ -27,8 +27,7 @@ CREATE TABLE FIG_EXERCISE
 	eid INT UNSIGNED NOT NULL AUTO_INCREMENT, -- unique exercise id
 	name VARCHAR(100),      -- name of the exercise
 	kcalhr INT UNSIGNED,    -- how many calories it burns
-	description TEXT,       -- description of the exercise
-	
+
 	PRIMARY KEY(eid)
 );
 
@@ -38,6 +37,7 @@ CREATE TABLE FIG_WORKOUT
 	user_id INT UNSIGNED,   -- CK and FK to FIG_USER
 	exercise INT UNSIGNED,  -- CK and FK to FIG_EXERCISE
 	performed_on DATETIME,  -- when the user did the exercise
+	notes TEXT,       -- user notes	
 	
 	minutes INT UNSIGNED,   -- Number of minutes the workout lasted
 	
@@ -54,3 +54,12 @@ CREATE TABLE FIG_WORKOUT
 		ON UPDATE CASCADE
 );
 
+INSERT INTO FIG_EXERCISE (name, kcalhr, description) VALUES
+('Golf', 368),
+('Fencing', 490),
+('Cleaning gutters', 409),
+('Ballroom dancing', 401),
+('Archery', 409),
+('Bird watching', 204),
+('Water polo', 817),
+('Squash', 981);
