@@ -40,12 +40,19 @@
 		<form role="form" method="post" action="profileUpdate.php">
 			<div class="inner">
 				<div class="row">
-					<div class="form-group col-md-6">
+					<div class="form-group col-md-4">
+						<!--image-->
+						<!--<input type="hiddden" name="MAX_FILE_SIZE" value="131072" />
+						<!--no bigger than 128KB-->
+						<img src="#" alt="Employee ID" />
+						<input type="file" name="headPhoto"/>
+					</div>
+					<div class="form-group col-md-4">
 						<label for="name">Name</label>
 						<input class="form-control" id="name" placeholder="First Name">
 					</div>
 
-					<div class="form-group col-md-6">
+					<div class="form-group col-md-4">
 						<label for="userName">User Name</label>
 						<input class="form-control" id="username" placeholder="User Name">
 					</div>

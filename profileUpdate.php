@@ -8,7 +8,7 @@
 
 <!DOCTYPE html>
 <html lang="US-EN">
-</head>
+<head>
 	<title>Fitness Incentivizer Goal System</title>
 
 	<!-- Latest compiled and minified CSS -->
@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 	
 	<link rel="stylesheet" type"text/css" media="screen" href="stylesheets/stylesheet.css">
+</head>
 <body>
 
 	<!--HEADER-->
@@ -40,6 +41,7 @@
 		$userName = $_POST['username'];
 		$password = $_POST['password'];
 
+		echo "after setting variables";		
 
 		//connect to the database to find the managerID and check if the password matches
 		$dbc = dbConnect();
@@ -47,6 +49,8 @@
 		$result = mysqli_query($dbc, $query) or die(mysqli_error($dbc));
 		//terminate the connection with the database
 		mysqli_close($dbc);
+
+		echo "database query finished";
 	?>
 
 	<!-- FOOTER -->
