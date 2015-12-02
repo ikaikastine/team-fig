@@ -368,7 +368,10 @@ Full-Width Styles
   background: #212121;
 }
 
-
+.photoUpload{
+	width: 200px;
+	float: left;
+}
 
 /*******************************************************************************
 Small Device Styles
