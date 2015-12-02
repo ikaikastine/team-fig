@@ -35,11 +35,11 @@
             
             <?php 
                 $ID     = ($_POST['userID']);
-                $name   = ("SELECT name FROM FIG_USER WHERE userID = '$ID'");
+                $name   = ("SELECT name FROM FIG_USER WHERE user_id = '$uid'");
                 $result = mysql_query($name);
                 print mysql_error();
 
-                $profile        = ("SELECT password, points, weight, height, age, location FROM FIG_USER WHERE user_id = '$ID'");
+                $profile        = ("SELECT password, points, weight, height, age, location FROM FIG_USER WHERE user_id = '$uid'");
                 $result_profile = mysql_query($profile);
 
             ?>
