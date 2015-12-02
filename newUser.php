@@ -129,7 +129,9 @@
 		$sql = "INSERT INTO FIG_USER SET
 		name = '$_POST[name]',
 		username = '$_POST[userID]',
-		password = '$hash'";
+		password = '$hash',
+		age = '$age',
+		weight = '$weight'";
 		
 		//move the image to images/
 		echo $_FILES['headPhoto']['tmp_name'];
@@ -139,7 +141,7 @@
 		//echo $extension;
 		$dir = 'images/'.$username.".".$extension;
 		move_uploaded_file($_FILES['headPhoto']['tmp_name'], $dir);
-		echo "image"
+		echo "image";
 
 		if (!mysqli_query($link,$sql))
 			error('A database error occurred in processing your '.
