@@ -66,6 +66,18 @@
 						<input class="form-control" type="password" name="password" placeholder="Password">
 					</div>
 
+          <div class="row">
+            <div class="form-group col-md-4">
+              <label for="name">Weight</label>
+              <input class="form-control" name="weight" placeholder="Weight">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="userID">Age</label>
+              <input class="form-control" name="age" placeholder="Age">
+            </div>
+          </div>
+
 					<button type="submit" name="submitok" class="btn btn-default">Submit</button>
  				</div>
 			</form>
