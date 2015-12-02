@@ -32,7 +32,7 @@
       <section id="main_content" class="inner">
         <h3>
         <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>View Profile</h3>
-            <p>Here is your information:</p>
+            
             <?php 
                 $ID          = ($_POST['userID']);
                 $name        = ("SELECT name FROM FIG_USER WHERE userID = '$ID'");
@@ -41,7 +41,7 @@
                 print mysql_error();
                 
             ?>
-
+            <p>Welcome back <?php echo $name_result['name']; ?> </p>
 
 
     </div>
