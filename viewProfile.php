@@ -51,9 +51,7 @@
                 <button type="submit" name="submitok" class="btn btn-default">Submit</button>
               </div>
             </form>
-            </div>
     </div>
-  </form>
     <!-- FOOTER -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
