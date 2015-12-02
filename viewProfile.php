@@ -57,6 +57,8 @@
                 ?>
             </p>
 
+            <p>Edit your profile <a href="editProfile.php">here</a></p>
+
     </div>
     <!-- FOOTER -->
     <div id="footer_wrap" class="outer">
