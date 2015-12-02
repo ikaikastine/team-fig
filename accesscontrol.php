@@ -33,7 +33,7 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 	
-		<link rel="stylesheet" type"text/css" media="screen" href="stylesheets/stylesheet.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 	</head>
 	<body>
 		<div id="header_wrap" class="outer">
