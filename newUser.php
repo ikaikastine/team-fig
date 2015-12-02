@@ -43,12 +43,19 @@
 			<form role="form" method="post" action="<?=$_SERVER['PHP_SELF']?>">
 				<div class="inner">
 					<div class="row">
-						<div class="form-group col-md-6">
+						<div class="form-group col-md-4 photoUpload">
+							<!--image-->
+							<!--<input type="hiddden" name="MAX_FILE_SIZE" value="131072" />
+							<!--no bigger than 128KB-->
+							<img src="#" alt="Employee ID" />
+							<input type="file" name="headPhoto"/>
+						</div>
+						<div class="form-group col-md-4">
 							<label for="name">Name</label>
 							<input class="form-control" name="name" placeholder="Name">
 						</div>
 
-						<div class="form-group col-md-6">
+						<div class="form-group col-md-4">
 							<label for="userID">Username</label>
 							<input class="form-control" name="userID" placeholder="Username">
 						</div>

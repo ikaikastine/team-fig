@@ -1,7 +1,7 @@
 <!--This is the page that updates the user profile to the database-->
 <?php
 	session_start();
-	$userID = $_SESSION['uid'];
+	$userName = $_SESSION['uid'];
 	include 'dp.php';
 ?>
 <!--seesion_start() must be the very first thing in the page-->
@@ -45,8 +45,16 @@
 
 		//connect to the database to find the managerID and check if the password matches
 		$dbc = dbConnect();
-		$query = "UPDATE FIG_USER SET name = '$name'; username = '$username'; password = '$password';  WHERE user_id = '$userID'";
+		$query = "UPDATE FIG_USER SET name = '$name'; password = '$password';  WHERE username = '$userName'";
 		$result = mysqli_query($dbc, $query) or die(mysqli_error($dbc));
+		//move the image to images/
+		//echo $_FILES['headPhoto']['tmp_name'];
+		$extension = split("[/\\.]", $_FILES['headPhoto']['name']);
+		$n = count($extension) - 1;
+		$extension = $extension[$n];
+		//echo $extension;
+		$dir = 'images/'.$userName.".".$extension;
+		move_uploaded_file($_FILES['headPhoto']['tmp_name'], $dir);
 		//terminate the connection with the database
 		mysqli_close($dbc);
 
