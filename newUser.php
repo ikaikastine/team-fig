@@ -40,7 +40,7 @@
 
 			<p>Were excited that you've decided to join us. Please fill out the information below to complete the setup of your profile</p>
 
-			<form role="form" method="post" action="<?=$_SERVER['PHP_SELF']?>">
+			<form role="form" enctype="multipart/form-data" method="POST" action="<?=$_SERVER['PHP_SELF']?>">
 				<div class="inner">
 					<div class="row">
 						<div class="form-group col-md-4 photoUpload">
@@ -129,7 +129,7 @@
 		$sql = "INSERT INTO FIG_USER SET
 		name = '$_POST[name]',
 		username = '$_POST[userID]',
-		password = '$_POST[hash]',
+		password = '$hash',
 		age = '$_POST[age]',
 		weight = '$_POST[weight]'";
 		
