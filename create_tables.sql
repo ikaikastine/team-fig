@@ -8,10 +8,16 @@ DROP TABLE IF EXISTS FIG_WORKOUT;
 CREATE TABLE FIG_USER
 (
 	user_id INT UNSIGNED NOT NULL AUTO_INCREMENT,   -- PK
-	name VARCHAR(100),      -- name of the user
-	username VARCHAR(100),  -- what they use to login with
-	password VARCHAR(100),  -- password (SHA2)
-	points INT UNSIGNED,	-- how many points do I have
+	name VARCHAR(100) NOT NULL,      -- name of the user
+	username VARCHAR(100) NOT NULL,  -- what they use to login with
+	password VARCHAR(100) NOT NULL,  -- password (SHA2)
+	points INT UNSIGNED NOT NULL DEFAULT 0,	-- how many points do I have
+	
+	picture BLOB, -- should we store the pic in the db or just store the path?
+	weight INT,
+	height INT,
+	age INT,
+	location VARCHAR(100),
 	
 	PRIMARY KEY(user_id)
 );
