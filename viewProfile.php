@@ -35,8 +35,6 @@
                 $sql = "SELECT name, password, points, weight, height, age, location FROM FIG_USER WHERE
                 username = '$uid' AND password = '$passhash'";
                 $result = mysqli_query($link, $sql);
-
-
             ?>
             <p>Welcome back <?php echo $result['name']; ?> </p>
 
