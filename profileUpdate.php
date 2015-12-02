@@ -1,5 +1,6 @@
 <!--This is the page that updates the user profile to the database-->
 <?php
+	include 'accesscontrol.php';
 	session_start();
 	$userName = $_SESSION['uid'];
 	include 'dp.php';
