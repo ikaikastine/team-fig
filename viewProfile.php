@@ -30,13 +30,12 @@
         <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>View Profile</h3>
             
             <?php 
-                $ID     = ($_POST['userID']);
-                $name   = ("SELECT name FROM FIG_USER WHERE user_id = '$uid'");
-                $result = mysql_query($name);
-                print mysql_error();
+                $link = dbConnect();
+                $passhash = hash('sha256', $pwd);
+                $sql = "SELECT name, password, points, weight, height, age, location FROM FIG_USER WHERE
+                username = '$uid' AND password = '$passhash'";
+                $result = mysqli_query($link, $sql);
 
-                $profile        = ("SELECT password, points, weight, height, age, location FROM FIG_USER WHERE user_id = '$uid'");
-                $result_profile = mysql_query($profile);
 
             ?>
             <p>Welcome back <?php echo $result['name']; ?> </p>
