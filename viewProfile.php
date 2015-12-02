@@ -38,7 +38,10 @@
                 $name   = ("SELECT name FROM FIG_USER WHERE userID = '$ID'");
                 $result = mysql_query($name);
                 print mysql_error();
-                
+
+                $profile        = ("SELECT password, points, weight, height, age, location FROM FIG_USER WHERE user_id = '$ID'");
+                $result_profile = mysql_query($profile);
+
             ?>
             <p>Welcome back <?php echo $result['name']; ?> </p>
 
