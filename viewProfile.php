@@ -38,7 +38,7 @@
                 $profile_result = mysqli_fetch_array($result);
                 
             ?>
-            <p>Welcome back <?php echo $result['name']; ?> </p>
+            <p>Welcome back <?php echo $profile_result['name']; ?> </p>
 
             <p> 
                 <?php 
