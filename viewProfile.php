@@ -41,13 +41,13 @@
 
             <p> 
                 <?php 
-                    echo "Name: " $result['name'];
-                    echo "Password: " $result['password'];
-                    echo "Points: " $result['points'];
-                    echo "Weight: " $result['weight'];
-                    echo "Height: " $result['height'];
-                    echo "Age: " $result['age'];
-                    echo "Location: " $result['location'];
+                    echo $result['name'];
+                    echo $result['password'];
+                    echo $result['points'];
+                    echo $result['weight'];
+                    echo $result['height'];
+                    echo $result['age'];
+                    echo $result['location'];
                 ?>
             </p>
 
