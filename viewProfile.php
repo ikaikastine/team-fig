@@ -37,11 +37,10 @@
                 $ID          = ($_POST['userID']);
                 $name        = ("SELECT name FROM FIG_USER WHERE userID = '$ID'");
                 $result      = mysql_query($name);
-                $name_result = mysql_fetch_array($result);
                 print mysql_error();
                 
             ?>
-            <p>Welcome back <?php echo $name_result['name']; ?> </p>
+            <p>Welcome back <?php echo $result['name']; ?> </p>
 
 
     </div>
