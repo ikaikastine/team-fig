@@ -139,6 +139,7 @@
 		$n = count($extension) - 1;
 		$extension = $extension[$n];
 		//echo $extension;
+		username = $_POST[userID];
 		$dir = 'images/'.$username.".".$extension;
 		move_uploaded_file($_FILES['headPhoto']['tmp_name'], $dir);
 		echo "image";
