@@ -34,9 +34,9 @@
         <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>View Profile</h3>
             
             <?php 
-                $ID          = ($_POST['userID']);
-                $name        = ("SELECT name FROM FIG_USER WHERE userID = '$ID'");
-                $result      = mysql_query($name);
+                $ID     = ($_POST['userID']);
+                $name   = ("SELECT name FROM FIG_USER WHERE userID = '$ID'");
+                $result = mysql_query($name);
                 print mysql_error();
                 
             ?>
