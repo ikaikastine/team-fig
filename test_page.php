@@ -25,11 +25,15 @@
 			-->
 		</header>
 	</div>
-
-	<div class="inner">
-		<p>WELCOME TO THE WEBSITE!</p>
-		<p>YOU ARE NOW IN THE LOGGED-IN SECTION OF THE SITE!</p>
-		<p><a  href="FORCE_LOGOUT.php">LOGOUT</a></p>
+	<div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+		<div class="inner">
+			<p>WELCOME TO THE WEBSITE!</p>
+			<p>YOU ARE NOW IN THE LOGGED-IN SECTION OF THE SITE!</p>
+			<p>View your profile <a href="viewProfile.php">here</a></p>
+			<p><a  href="FORCE_LOGOUT.php">LOGOUT</a></p>
+		</div>
+		</section>
 	</div>
 </body>
 </html>
