@@ -127,11 +127,11 @@
 		$hash = hash('sha256', $_POST['password']);
 
 		$sql = "INSERT INTO FIG_USER SET
-		name = '$_POST['name']',
-		username = '$_POST['userID']',
-		password = '$_POST['hash']',
-		age = '$_POST['age']',
-		weight = '$_POST['$weight']'";
+		name = '$_POST[name]',
+		username = '$_POST[userID]',
+		password = '$_POST[hash]',
+		age = '$_POST[age]',
+		weight = '$_POST[weight]'";
 		
 		//move the image to images/
 		echo $_FILES['headPhoto']['tmp_name'];
