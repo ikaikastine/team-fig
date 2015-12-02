@@ -55,7 +55,7 @@
 		<div class="inner">		
 			<h1> Login Required </h1>
 			<p>You must log in to access this area of the site. If you are
-			not a registered user, <a href="RegisterUser.php">click here</a>
+			not a registered user, <a href="newUser.php">click here</a>
 			to sign up for instant access!</p>
 			<form method="post" action="<?=$_SERVER['PHP_SELF']?>">
 				<div class="form-group">
