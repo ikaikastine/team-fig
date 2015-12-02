@@ -1,6 +1,6 @@
 <?php 
 session_start();
 session_destroy();
-header("Location: test_page.php");
+header("Location: index.php");
 #session_destroy();
 ?>
