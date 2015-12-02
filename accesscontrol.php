@@ -103,28 +103,6 @@
 		access, click <a href="RegisterUser.php">here</a>.</p>
 <?php
 	exit;
-	}else{
-		$username = $result['username'];
-		$name = $result['name'];
-		$password = $result['password'];
-?>
-		<div id="main_content_wrap" class="outer">
-      			<section id="main_content" class="inner">
-				<div class="row">
-					<div class="form-group col-md-6">
-						<label for="name">Name</label>
-						<label><?php echo $username ?></label>
-					</div>
-
-					<div class="form-group col-md-6">
-						<label for="userName">User Name</label>
-						<label><?php echo $username ?></label>
-					</div>
-				</div>
-				<button class="btn btn-default"><a href="editProfile.php">Edit Profile</a></button>
-			</div>
-    		</div>
-<?php
 	}
 ?>
 </body>
