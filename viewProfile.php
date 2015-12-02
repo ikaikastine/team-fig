@@ -35,19 +35,20 @@
                 $sql = "SELECT name, password, points, weight, height, age, location FROM FIG_USER WHERE
                 username = '$uid' AND password = '$passhash'";
                 $result = mysqli_query($link, $sql);
+                $profile_result = mysqli_fetch_array($result);
                 
             ?>
             <p>Welcome back <?php echo $result['name']; ?> </p>
 
             <p> 
                 <?php 
-                    echo $result['name'];
-                    echo $result['password'];
-                    echo $result['points'];
-                    echo $result['weight'];
-                    echo $result['height'];
-                    echo $result['age'];
-                    echo $result['location'];
+                    echo $profile_result['name'];
+                    echo $profile_result['password'];
+                    echo $profile_result['points'];
+                    echo $profile_result['weight'];
+                    echo $profile_result['height'];
+                    echo $profile_result['age'];
+                    echo $profile_result['location'];
                 ?>
             </p>
 
