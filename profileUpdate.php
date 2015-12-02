@@ -49,7 +49,7 @@
 		$result = mysqli_query($dbc, $query) or die(mysqli_error($dbc));
 		//move the image to images/
 		//echo $_FILES['headPhoto']['tmp_name'];
-		$extension = split("[/\\.]", $_FILES['headPhoto']['name']);
+		$extension = preg_split("[/\\.]", $_FILES['headPhoto']['name']);
 		$n = count($extension) - 1;
 		$extension = $extension[$n];
 		//echo $extension;
