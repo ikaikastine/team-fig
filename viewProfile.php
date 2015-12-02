@@ -43,7 +43,7 @@
             <p> 
                 <?php 
                     echo $profile_result['name'];
-                    echo $profile_result['password'];
+                    #echo $profile_result['password'];
                     echo $profile_result['points'];
                     echo $profile_result['weight'];
                     echo $profile_result['height'];
