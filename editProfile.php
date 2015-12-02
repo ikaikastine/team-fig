@@ -37,12 +37,12 @@
 		<p>Please update the information below</p>
 
 
-		<form role="form" method="post" action="profileUpdate.php">
+		<form role="form" method="post" action="profileUpdate.php" enctype="multipart/form-data">
 			<div class="inner">
 				<div class="row">
 					<div class="form-group col-md-4">
 						<!--image-->
-						<!--<input type="hiddden" name="MAX_FILE_SIZE" value="131072" />-->
+						<!--<input type="hiddden" name="MAX_FILE_SIZE" value="131072" />
 						<!--no bigger than 128KB-->
 						<img src="#" alt="User Name" />
 						<input type="file" name="headPhoto"/>
