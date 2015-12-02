@@ -45,6 +45,8 @@
 			<h3><a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Returning Users</h3>
 
 			<p>Please login in the upper right section of the page to view your profile</p>
+			
+			<p>Click <a href="viewWorkouts.php">Here</a> to view your workout history.</p>
 
 			<!-- SUPPORT OR CONTACT -->
 			<h3><a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
