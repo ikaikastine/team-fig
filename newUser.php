@@ -129,7 +129,9 @@
 		$sql = "INSERT INTO FIG_USER SET
 		name = '$_POST[name]',
 		username = '$_POST[userID]',
-		password = '$hash'";
+		password = '$hash',
+		age = '$age',
+		weight = '$weight'";
 		
 		//move the image to images/
 		echo $_FILES['headPhoto']['tmp_name'];
