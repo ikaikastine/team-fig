@@ -6,6 +6,7 @@
     if (!isset($_POST['submitok'])):
 // Display the user signup form
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -32,25 +33,19 @@
         <h3>
         <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>View Profile</h3>
             <p>Here is your information:</p>
-            <form role="form" method="post" action="<?=$_SERVER['PHP_SELF']?>">
-              <div class="inner">
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Name</label>
-                    <input class="form-control" name="name" placeholder="Name">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="userID">Username</label>
-                    <input class="form-control" name="userID" placeholder="Username">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input class="form-control" type="password" name="password" placeholder="Password">
-                </div>
-                <button type="submit" name="submitok" class="btn btn-default">Submit</button>
-              </div>
-            </form>
+            <?php 
+            $ID = ($_POST['userID']);
+            $name        = ("SELECT name FROM  FIG_USER WHERE userID = '$ID'");
+            $result      = mysql_query($name);
+            $name_result = mysql_fetch_array($result);
+            print mysql_error();
+
+
+
+            ?>
+
+
+
     </div>
     <!-- FOOTER -->
     <div id="footer_wrap" class="outer">
