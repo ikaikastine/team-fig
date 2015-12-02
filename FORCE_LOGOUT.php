@@ -1,5 +1,6 @@
 <?php 
-header("Location: test_page.php");
-include 'accesscontrol.php';
+session_start();
 session_destroy();
+header("Location: index.php");
+#session_destroy();
 ?>
