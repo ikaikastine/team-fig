@@ -40,13 +40,13 @@
 		//get the managerID and the password via POST
 		$name = $_POST['name'];
 		$userName = $_POST['username'];
-		$password = $_POST['password'];
+		$password = hash('sha256', $_POST['password']);
 
 		echo "after setting variables";		
 
 		//connect to the database to find the managerID and check if the password matches
 		$dbc = dbConnect();
-		$query = "UPDATE FIG_USER SET name = '$name', password = '$password',  WHERE username = '$userName'";
+		$query = "UPDATE FIG_USER SET name = '$name', password = '$password' WHERE username = '$userName'";
 		$result = mysqli_query($dbc, $query) or die(mysqli_error($dbc));
 		//move the image to images/
 		//echo $_FILES['headPhoto']['tmp_name'];
