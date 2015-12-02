@@ -34,14 +34,12 @@
         <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>View Profile</h3>
             <p>Here is your information:</p>
             <?php 
-            $ID = ($_POST['userID']);
-            $name        = ("SELECT name FROM  FIG_USER WHERE userID = '$ID'");
-            $result      = mysql_query($name);
-            $name_result = mysql_fetch_array($result);
-            print mysql_error();
-
-
-
+                $ID          = ($_POST['userID']);
+                $name        = ("SELECT name FROM FIG_USER WHERE userID = '$ID'");
+                $result      = mysql_query($name);
+                $name_result = mysql_fetch_array($result);
+                print mysql_error();
+                
             ?>
 
 
