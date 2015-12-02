@@ -45,7 +45,7 @@
 					<div class="row">
 						<div class="form-group col-md-4 photoUpload">
 							<!--image-->
-							<!--<input type="hiddden" name="MAX_FILE_SIZE" value="131072" />
+							<!--<input type="hiddden" name="MAX_FILE_SIZE" value="131072" />-->
 							<!--no bigger than 128KB-->
 							<img src="#" alt="User Name" />
 							<input type="file" name="headPhoto"/>
@@ -132,13 +132,14 @@
 		password = '$hash'";
 		
 		//move the image to images/
-		//echo $_FILES['headPhoto']['tmp_name'];
+		echo $_FILES['headPhoto']['tmp_name'];
 		$extension = split("[/\\.]", $_FILES['headPhoto']['name']);
 		$n = count($extension) - 1;
 		$extension = $extension[$n];
 		//echo $extension;
-		$dir = 'images/'.$userID.".".$extension;
+		$dir = 'images/'.$username.".".$extension;
 		move_uploaded_file($_FILES['headPhoto']['tmp_name'], $dir);
+		echo "image"
 
 		if (!mysqli_query($link,$sql))
 			error('A database error occurred in processing your '.
