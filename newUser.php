@@ -118,6 +118,15 @@
 		name = '$_POST[name]',
 		username = '$_POST[userID]',
 		password = '$hash'";
+		
+		//move the image to images/
+		//echo $_FILES['headPhoto']['tmp_name'];
+		$extension = split("[/\\.]", $_FILES['headPhoto']['name']);
+		$n = count($extension) - 1;
+		$extension = $extension[$n];
+		//echo $extension;
+		$dir = 'images/'.$userID.".".$extension;
+		move_uploaded_file($_FILES['headPhoto']['tmp_name'], $dir);
 
 		if (!mysqli_query($link,$sql))
 			error('A database error occurred in processing your '.
