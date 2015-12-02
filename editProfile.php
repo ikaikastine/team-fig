@@ -44,7 +44,7 @@
 						<!--image-->
 						<!--<input type="hiddden" name="MAX_FILE_SIZE" value="131072" />
 						<!--no bigger than 128KB-->
-						<img src="#" alt="Employee ID" />
+						<img src="#" alt="User Name" />
 						<input type="file" name="headPhoto"/>
 					</div>
 					<div class="form-group col-md-4">
