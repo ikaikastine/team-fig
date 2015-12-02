@@ -1,10 +1,6 @@
 <?php ini_set('display_errors', 'On'); ?>
 <?php // RegisterUser.php
-    include 'common.php';
-    include 'db.php';
-    include_once 'cred.php';
-    if (!isset($_POST['submitok'])):
-// Display the user signup form
+    include 'accesscontrol.php';
 ?>
 
 <!DOCTYPE html>
